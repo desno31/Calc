@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main {
        static int romanToInt(String s){
            switch (s){
@@ -116,5 +117,18 @@ public class Main {
         result = intToRoman(value);
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        boolean b = true;
+        while (b == true) {
+            if (sc.hasNext("stop")){
+                b = false;
+                break;
+            }
+            String input = sc.nextLine();
+            System.out.println(calc(input));
+        }
     }
 }
